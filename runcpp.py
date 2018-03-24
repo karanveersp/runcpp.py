@@ -28,11 +28,10 @@ def usage():
     print('runcpp.py -i <filename> (without .cpp extension)')
 
 def run(cpp_file, exe_file):
-    x = subprocess.getoutput('g++ ' + cpp_file + ' -o ' + exe_file)     # Compile the .cpp file and store any error message
-    if x == "": # no error message
-        subprocess.run(exe_file)        # run the program
-    else:
-        print(x)                        # display the error
+    x = subprocess.run('g++ ' + cpp_file + ' -o ' + exe_file + ' -Werror -Wall') # Compile & treat warnings as errors and list all warnings. 
+    if x.returncode == 0:                                                        # If compiled without errors
+        subprocess.run(exe_file)                        
+    
 
 if __name__=='__main__':
     main(sys.argv[1:])
