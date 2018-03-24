@@ -28,7 +28,7 @@ def usage():
     print('runcpp.py -i <filename> (without .cpp extension)')
 
 def run(cpp_file, exe_file):
-    x = subprocess.run('g++ ' + cpp_file + ' -o ' + exe_file + ' -Werror -Wall') # Compile & treat warnings as errors and list all warnings. 
+    x = subprocess.run('g++ ' + cpp_file + ' -o ' + exe_file + ' -Werror -Wall') # Compile & treat warnings as errors and list all warnings 
     if x.returncode == 0:                                                        # If compiled without errors
         subprocess.run(exe_file)                        
     
