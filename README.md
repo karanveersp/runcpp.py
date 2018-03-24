@@ -17,5 +17,7 @@ I found that I wrote programs in python faster because how quickly I could switc
 
 So I decided to make writing C++ a little bit more fun by reducing that two-step process down to one. If there are any compile errors, then they will be displayed on the terminal and the script will end. The executable will only run if the compiler has no complaints.
 
-For the time being, the script runs only on windows machines. I intend to add features to this script to be cross-platform, support header files and linking with other source files and being able to process g++ operations and arguments. 
+For the time being, the script runs only on windows machines and compilation treats all warnings as errors. 
+
+I intend to add features to this script to be cross-platform, support header files and linking with other source files and being able to process g++ operations and arguments. 
 Feel free to customize the code to your liking.
